@@ -1,0 +1,29 @@
+<view class="container">
+  <t-tabs defaultValue="{{0}}" bind:change="onTabsChange" t-class="custom-tabs" wx:if="{{lineGroups.length > 1}}">
+    <t-tab-panel wx:for="{{lineGroups}}" wx:for-index="idx" wx:for-item="item" wx:key="groupCode" label="{{item.groupName}}" value="{{idx}}" />
+  </t-tabs>
+  <view class="time-line">
+    <t-sticky>
+      <t-cell title="{{currentArrow.lineNameArrow}}" hover note="切换方向" right-icon="swap" bind:click="handleSwap" />
+    </t-sticky>
+    <t-divider />
+    <view class="side-bar-wrapper">
+      <t-side-bar value="{{sideBarIndex}}" bind:change="onSideBarChange">
+        <t-side-bar-item wx:for="{{currentArrow.lineStations}}" wx:for-index="idx" wx:key="stationId" value="{{idx}}" label="{{item.stationName}}" disabled="{{item.isEnd}}" />
+      </t-side-bar>
+      <view class="content">
+        <scroll-view class="section" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation show-scrollbar="{{true}}">
+          <t-cell-group>
+            <block wx:for="{{timeList}}" wx:for-item="xitem" wx:for-index="xidx" wx:key="id">
+              <t-cell title="{{xitem.enterTime}}" wx:if="{{!xitem.isEnd}}">
+                <t-badge color="#0052d9" count="{{xitem.num}}" slot="note" />
+                <t-image shape="round" src="{{cargo.image}}" slot="image" lazy t-class="image" />
+              </t-cell>
+            </block>
+          </t-cell-group>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>
+<t-action-sheet id="t-action-sheet" bind:selected="handleSelected" />

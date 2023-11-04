@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "广州地铁快车时刻表",
+  "usingComponents": {
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-footer": "tdesign-miniprogram/footer/footer",
+    "t-dialog": "tdesign-miniprogram/dialog/dialog"
+  }
+}

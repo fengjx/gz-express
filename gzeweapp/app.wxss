@@ -1,0 +1,7 @@
+@import 'style/global.wxss';
+
+/**app.wxss**/
+.container {
+  height: 100%;
+  background-color: #f8f8f8;
+} 

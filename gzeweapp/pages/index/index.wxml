@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="list">
+    <view class="list-btn" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="lineShowCode">
+      <t-button data-line-id="{{item.lineId}}" size="large" variant="outline" theme="primary" bind:tap="handleClick" block t-class="line-btn-class">
+        {{item.lineName}}
+      </t-button>
+    </view>
+    <view class="list-btn">
+      <t-button open-type="contact" size="large" variant="outline" theme="danger" t-class="line-btn-class" block>
+        数据纠错
+      </t-button>
+    </view>
+  </view>
+  <view class="my-footer">
+    <t-footer text="{{footerContent}}" links="{{links[0]}}" />
+  </view>
+</view>
+<t-dialog visible="{{showReport}}" title="数据错误反馈" content="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内" confirm-btn="{{ true }}" bind:confirm="closeReport" />

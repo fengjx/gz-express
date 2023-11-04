@@ -1,0 +1,7 @@
+
+### list - 线路列表
+GET http://{{host}}/openapi/line/list
+
+### line-data - 线路时间表明细
+GET http://{{host}}/openapi/line/data?lineId=21
+

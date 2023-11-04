@@ -1,0 +1,26 @@
+.container {
+  background-color: #fff;
+}
+
+.list {
+  height: 90%;
+}
+
+.list-btn{
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+
+.my-footer {
+  padding: 8rpx 0;
+}
+
+.my-footer:not(:last-child) {
+  margin-bottom: 32rpx;
+}
+
+.line-btn-class {
+  border-radius: 0 !important;
+}

@@ -1,0 +1,21 @@
+{
+  "code": 0,
+  "msg": "ok",
+  "data": [
+    {
+      "lineId": 21,
+      "lineShowCode": "21",
+      "lineName": "二十一号线"
+    },
+    {
+      "lineId": 18,
+      "lineShowCode": "18",
+      "lineName": "十八号线"
+    },
+    {
+      "lineId": 14,
+      "lineShowCode": "14",
+      "lineName": "十四号线"
+    }
+  ]
+}
