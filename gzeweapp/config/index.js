@@ -14,16 +14,16 @@ export function isDev() {
 // todo
 export const cloudConfig = {
   test: {
-    env: '',
-    service: 'gzesvr-test',
+    env: 'demo-6ghsdp0t093b8856',
+    service: 'gzesvr',
   },
   trial: {
-    env: '',
-    service: 'gzesvr-test',
+    env: 'demo-6ghsdp0t093b8856',
+    service: 'gzesvr',
   },
   prod: {
-    env: '',
-    service: 'gzesvr-prod',
+    env: 'demo-6ghsdp0t093b8856',
+    service: 'gzesvr',
   },
 };
 
